@@ -2,14 +2,14 @@
     <div v-if="this.loaded">
         <v-card>
             <v-card-title>
-                {{ this.userdata.name }} - Wunschliste
+                <p class="break">{{ this.userdata.name }} - Wunschliste</p>
             </v-card-title>
 
             <v-list-item v-for="wish in this.wishes" v-bind:key="wish.id">
                 <v-list-item-content>
                     <v-container>
 
-                        <v-btn color="primary" class="ml-14" v-if="wish.claimed_by === null" v-on:click="claimWish(wish.id)"><p>Beanspruchen<v-icon>mdi-book-lock</v-icon></p></v-btn>
+                        <v-btn color="primary" v-if="wish.claimed_by === null" v-on:click="claimWish(wish.id)"><p>Beanspruchen<v-icon>mdi-book-lock</v-icon></p></v-btn>
                         <p v-else-if="wish.claimed_by === selfid">Von dir reserviert<v-icon>mdi-lock</v-icon></p>
                         <p v-else>Bereits reserviert<v-icon>mdi-lock</v-icon></p>
 
@@ -107,5 +107,9 @@ export default {
 </script>
 
 <style scoped>
-
+    .break {
+        word-wrap: break-spaces;
+        word-break: break-word;
+    }
 </style>
+
