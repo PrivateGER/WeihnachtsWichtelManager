@@ -3,7 +3,7 @@
         <v-list-item>
             <v-list-item-content>
                 <v-list-item-title>
-                    <UserInfo class="header" :userid="targetid" :extended=true :selfid="selfid"></UserInfo>
+                    <UserInfo class="" :userid="targetid" :extended=true :selfid="selfid"></UserInfo>
                 </v-list-item-title>
             </v-list-item-content>
         </v-list-item>

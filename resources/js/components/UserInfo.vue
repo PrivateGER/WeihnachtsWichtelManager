@@ -11,9 +11,11 @@
 
                         <v-btn color="primary" v-if="wish.claimed_by === null" v-on:click="claimWish(wish.id)"><p>Beanspruchen<v-icon>mdi-book-lock</v-icon></p></v-btn>
                         <p v-else-if="wish.claimed_by === selfid">Von dir reserviert<v-icon>mdi-lock</v-icon></p>
-                        <p v-else>Bereits reserviert<v-icon>mdi-lock</v-icon></p>
+                        <p v-else class="headline">Bereits reserviert<v-icon>mdi-lock</v-icon></p>
 
-                        <v-list-item-title>{{  wish.wish }}</v-list-item-title>
+                        <v-list-item-content>
+                            <p>{{  wish.wish }}</p>
+                        </v-list-item-content>
 
                         <br />
                         <v-divider></v-divider>
