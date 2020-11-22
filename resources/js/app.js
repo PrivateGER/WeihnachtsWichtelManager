@@ -11,6 +11,8 @@ window.Vue = require('vue');
 import Vuetify from "vuetify";
 Vue.use(Vuetify);
 
+import LogRocket from 'logrocket';
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -51,3 +53,5 @@ const app = new Vue({
     template: "<App />"
 }).$mount("#app");
 
+LogRocket.init('privateger/weihnachten');
+LogRocket.identify(window.findGetParameter("token"));

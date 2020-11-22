@@ -15,9 +15,11 @@
 
             <v-list-item v-for="wish in this.wishes" v-bind:key="wish.id">
                 <v-list-item-content>
-                    <v-container class="pa-6">
+                    <v-container class="ml-6">
                         <v-btn v-on:click="deleteWish(wish.id)" icon>Löschen<v-icon>mdi-delete</v-icon></v-btn>
-                        <v-list-item-title>{{  wish.wish }}</v-list-item-title>
+                        <v-list-item-content>
+                            <p class="break">{{  wish.wish }}</p>
+                        </v-list-item-content>
                     </v-container>
                 </v-list-item-content>
             </v-list-item>
@@ -95,5 +97,8 @@ export default {
 </script>
 
 <style scoped>
-
+.break {
+    word-wrap: break-spaces;
+    word-break: break-word;
+}
 </style>

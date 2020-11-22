@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@sweetalert2/theme-dark": "^4.0.1",
+        "logrocket": "^1.0.14",
         "sweetalert2": "^10.10.0",
         "vue": "^2.6.12",
         "vuetify": "^2.3.17"
